@@ -1,0 +1,31 @@
+<form action="#" method="post" onsubmit="return validation()">
+  <input type="text" name="userid" class="userid">
+  <input type="password" name="password" class="password">
+  <input type="submit" name="submit" value="LOGIN">
+  </form>
+  <div class="eresult" ></div>
+<script type="text/javascript">
+function validation()
+{
+  var name=document.getElementById('userid').value;
+  var name=document.getElementById('password').value;
+  if(userid==''|| password=='')
+  { document.getElementById("eresult").innerHTML="ALL FIELDS REQUIRED";
+    return false;
+}
+else if(name.length<4)
+{
+  document.getElementById("eresult").innerHTML="ATLEAST 4 CHARACTERS";
+    return false;
+}
+else if(password.length<4)
+{
+  document.getElementById("eresult").innerHTML="ATLEAST 4 CHARACTERS";
+    return false;
+}
+else
+{
+  return true;
+}
+}
+</script>
